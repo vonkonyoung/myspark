@@ -76,6 +76,11 @@
             <scope>compile</scope>
         </dependency>
         <!-- Uncomment this to add support for hibernate, bean validation and file uploads -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>1.5.1</version>
+        </dependency>
         <!--
         <dependency>
             <groupId>org.apache.tapestry</groupId>
