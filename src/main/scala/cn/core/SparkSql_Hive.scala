@@ -9,7 +9,7 @@ object SparkSql_Hive {
       .appName(this.getClass.getSimpleName)
       .master("local[*]")
       .config("dfs.client.use.datanode.hostname", "true")
-      .enableHiveSupport()
+//      .enableHiveSupport()
       .getOrCreate()
     //指定库名
     val sql1 = "use toutiao"

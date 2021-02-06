@@ -75,11 +75,11 @@
             <version>${tapestry-version}</version>
             <scope>compile</scope>
         </dependency>
-        <!-- Uncomment this to add support for hibernate, bean validation and file uploads -->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.10</artifactId>
-            <version>1.5.1</version>
+            <artifactId>spark-core_2.12</artifactId>
+            <version>2.4.7</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
@@ -95,10 +95,12 @@
 <!--            <version>2.4.7</version>-->
 <!--            <scope>provided</scope>-->
 <!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.11</artifactId>
-            <version>2.0.0</version>
+            <artifactId>spark-hive_2.12</artifactId>
+            <version>2.4.7</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive-thriftserver -->
