@@ -15,7 +15,7 @@ object WordCount {
     val sc = new SparkContext(conf)
 
 //    val lines = sc.textFile("hdfs://spark1:9000/spark.txt", 1);
-    val lines = sc.textFile("file:///C://Users//fengjr//Desktop/工作进展.txt", 1);
+    val lines = sc.textFile("file:///C://Users//fengjr//Desktop/账号.txt", 1);
     val words = lines.flatMap { line => line.split(" ") }
     val pairs = words.map { word => (word, 1) }
     val wc = pairs.reduceByKey { _ + _ }
