@@ -10,14 +10,20 @@ object SparkSql_Hive {
       .appName("Java Spark Hive Example")
       .master("local[*]")
       .config("spark.sql.warehouse.dir","/user/hive/warehouse")
+      .config("hive.metastore.uris", "thrift://hadoop-master:9083")
       .enableHiveSupport()
       .getOrCreate();
-//    spark.sql("show databases").show();
-    val sql1 = "use toutiao"
+    spark.sql("show databases").show();
+    val sql1 = "use default"
     spark.sql(sql1)
     //查看该库下的表结构
     val sql2 = "show tables"
     spark.sql(sql2).show()
+    val sql3 = "use toutiao"
+    spark.sql(sql3)
+    //查看该库下的表结构
+    val sql4 = "show tables"
+    spark.sql(sql4).show()
 
     //创建SparkSession对象
 //    val spark = SparkSession.builder()

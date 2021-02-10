@@ -20,6 +20,16 @@
   <!-- WARNING!!! You must make your changes in hive-site.xml instead.         -->
   <!-- Hive Execution Parameters -->
   <property>
+    <name>hive.metastore.local</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>hive.metastore.uris</name>
+    <value>thrift://hadoop-master:9083</value>
+  </property>
+
+  <property>
     <name>hive.exec.script.wrapper</name>
     <value/>
     <description/>
